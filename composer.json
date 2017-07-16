@@ -1,0 +1,23 @@
+{
+    "name": "aitor24/notifier",
+    "description": "Laravel package to display notifications from different JS libraries easily in the frontend",
+    "require": {
+        "php": ">=5.6.4",
+        "laravel/framework": "v5.4.*"
+    },
+    "type": "notifications",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Aitor Riba",
+            "email": "contact@aitorriba.com",
+			"homepage": "https://aitorriba.com/",
+			"role": "author"
+        },
+    ],
+	"autoload": {
+		"psr-4": {
+			"Aitor24\\Notifier\\": "./src"
+		}
+	}
+}
