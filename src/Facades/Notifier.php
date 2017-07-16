@@ -1,6 +1,7 @@
 <?php
 
 namespace Aitor24\Notifier\Facades;
+
 use Aitor24\Notifier\Builder;
 use Illuminate\Support\Facades\Facade;
 

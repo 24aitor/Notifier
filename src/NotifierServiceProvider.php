@@ -1,6 +1,9 @@
 <?php
+
 namespace Aitor24\Notifier;
+
 use Illuminate\Support\ServiceProvider;
+
 class NotifierServiceProvider extends ServiceProvider
 {
     /**
@@ -20,6 +23,7 @@ class NotifierServiceProvider extends ServiceProvider
             __DIR__.'/Resources/Views' => base_path('resources/views/vendor/Aitor24/Notifier'),
         ], 'notifier_views');
     }
+
     /**
      * Register the application services.
      *
