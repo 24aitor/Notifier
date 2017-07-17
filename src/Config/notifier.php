@@ -16,7 +16,7 @@ return [
         ],
         'alertify' => [
             'https://cdn.jsdelivr.net/alertifyjs/1.10.0/css/alertify.min.css',
-            'https://cdn.jsdelivr.net/alertifyjs/1.10.0/css/themes/default.min.css'
-        ]
+            'https://cdn.jsdelivr.net/alertifyjs/1.10.0/css/themes/default.min.css',
+        ],
     ],
 ];
