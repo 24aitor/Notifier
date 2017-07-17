@@ -5,6 +5,6 @@
         title: '{{ $string }}',
         message: '{{ $subtitle }}'
     },{
-        type: '{{ $type }}'
+        type: '{{ $type == 'error' ? 'danger' : $type }}'
     });
 </script>

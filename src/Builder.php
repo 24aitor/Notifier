@@ -2,6 +2,8 @@
 
 namespace Aitor24\Notifier;
 
+use Aitor24\Notifier\Builder\Notification;
+
 class Builder
 {
     /**
@@ -19,7 +21,6 @@ class Builder
         }
 
         if (is_array($library)) {
-            dd('v');
             foreach ($library as $key => $libname) {
                 foreach ($libname as $css) {
                     $assets = $assets.'<link rel="stylesheet" href="'.$css.'" />';
@@ -41,16 +42,8 @@ class Builder
      *
      * @return string
      */
-    public static function notify($string, $type = null, $library = null)
+    public static function notify($string, $type = null)
     {
-        if (!$type) {
-            $type = config('notifier.defaults.type');
-        }
-
-        if (!$library) {
-            $library = config('notifier.defaults.library');
-        }
-
-        return view('notifier::'.$library, ['string' => is_array($string) ? $string[0] : $string, 'subtitle' => is_array($string) ? $string[1] : '', 'type' => $type]);
+        return new Notification($string, $type);
     }
 }

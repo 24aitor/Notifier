@@ -19,8 +19,7 @@ Laravel package to generate easily js notifications from php code
     </head>
     <body>
         <!-- your content -->
-
-        {!! Notifier::notify('Permission denied', 'error') !!}
+        {!! Notifier::notify('Permission denied', 'error')->subtitle('You have not access to this site!') !!}
     </body>
 </html>
 ```
