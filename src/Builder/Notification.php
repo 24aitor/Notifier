@@ -52,7 +52,7 @@ class Notification
     }
 
     /**
-     * It would render the notification
+     * It would render the notification.
      */
     public function __toString()
     {
