@@ -54,7 +54,7 @@ class Builder
      *
      * @return string
      */
-    public static function all($library = NULL)
+    public static function all($library = null)
     {
         if (is_null($library)) {
             $library = config('notifier.defaults.library');
