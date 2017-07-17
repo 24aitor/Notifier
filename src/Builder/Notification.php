@@ -52,8 +52,7 @@ class Notification
     }
 
     /**
-     * This fuction is called by trans() function of Fadade Laralang
-     * It would call run() function of this class and returns the translation.
+     * It would render the notification
      */
     public function __toString()
     {
