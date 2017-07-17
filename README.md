@@ -8,18 +8,68 @@
 
 Laravel package to generate easily js notifications from php code
 
-## Blade example
+## Getting started
+
+### Register service provider
+
+```
+Aitor24\Notifier\NotifierServiceProvider::class,
+```
+
+## Register alias
+
+```
+'Notifier' => Aitor24\Notifier\Facades\Notifier::class,
+```
+
+
+## Simple example
 
 ```php
 <html>
     <head>
         <meta charset="utf-8">
-        <title></title>
         {!! Notifier::assets('sweetalert') !!}
     </head>
     <body>
         <!-- your content -->
+
         {!! Notifier::notify('Permission denied', 'error')->subtitle('You have not access to this site!') !!}
     </body>
 </html>
 ```
+
+## Catching base session notifications
+
+If you don't want to call notify function everytime, all function is your solution. This function catch all session base messages (success, info, error, and warning) and you only need to put the code in the layout as following example.
+
+### Controller example
+
+You should do redirect with ``->with()`` function to flash messages for next request on session.
+
+```php
+public function redirect()
+{
+    return redirect()->route('welcome')->with('success', 'All done!');
+}
+```
+
+### Layout example
+
+Then your layout should have similar structure to following code snippet
+
+```php
+<html>
+    <head>
+        <meta charset="utf-8">
+        {!! Notifier::assets('sweetalert') !!}
+    </head>
+    <body>
+        <!-- your content -->
+
+        {!! Notifier::all('sweetalert') !!}
+    </body>
+</html>
+```
+
+Function ``all()`` can be called without parameters, then the library will be the config('notifier.defaults.library') library.

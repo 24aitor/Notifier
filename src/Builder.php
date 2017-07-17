@@ -46,4 +46,20 @@ class Builder
     {
         return new Notification($string, $type);
     }
+
+    /**
+     * Return the notification.
+     *
+     * @param string $string
+     *
+     * @return string
+     */
+    public static function all($library = NULL)
+    {
+        if (is_null($library)) {
+            $library = config('notifier.defaults.library');
+        }
+
+        return view('notifier::master', ['library' => $library]);
+    }
 }
