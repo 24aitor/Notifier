@@ -35,6 +35,7 @@ class Notification
     public function subtitle($subtitle)
     {
         $this->subtitle = $subtitle;
+
         return $this;
     }
 
@@ -46,6 +47,7 @@ class Notification
     public function library($library)
     {
         $this->library = $library;
+
         return $this;
     }
 
