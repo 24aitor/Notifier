@@ -1,5 +1,9 @@
 <h1 align="center">Notifier</h1>
 
+<h2 align="center">Package under development</h2>
+
+<b>This package has not been finished yet. Wait for it!</b>
+
 <p align="center">
     <a href="https://styleci.io/repos/97416845"><img src="https://styleci.io/repos/97416845/shield?style=flat&branch=master" alt="StyleCI"></a>
     <a href="https://github.com/24aitor/Notifier/releases"><img src="https://poser.pugx.org/aitor24/notifier/v/stable.svg" alt="Version"></a>
