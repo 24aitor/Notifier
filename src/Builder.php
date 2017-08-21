@@ -64,10 +64,8 @@ class Builder
 
         $types->each(function ($type) use ($response, $library) {
             if (session()->has($type)) {
-                echo(self::notify(session()->get($type), $type)->library($library));
+                echo self::notify(session()->get($type), $type)->library($library);
             }
         });
-
-        return;
     }
 }

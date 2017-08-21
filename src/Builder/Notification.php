@@ -59,7 +59,7 @@ class Notification
         return View::make('notifier::'.$this->library, [
             'string'   => $this->string,
             'subtitle' => $this->subtitle,
-            'type'     => $this->type
+            'type'     => $this->type,
         ])->render();
     }
 }
