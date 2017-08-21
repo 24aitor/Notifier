@@ -3,7 +3,7 @@
     "description": "Laravel package to display notifications from different JS libraries easily in the frontend",
     "require": {
         "php": ">=5.6.4",
-        "laravel/framework": "v5.4.*"
+        "illuminate/support": "5.*"
     },
     "type": "notifications",
     "license": "MIT",
@@ -19,5 +19,16 @@
 		"psr-4": {
 			"Aitor24\\Notifier\\": "./src"
 		}
-	}
+	},
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Aitor24\\Notifier\\NotifierServiceProvider"
+            ],
+            "aliases": {
+                "Notifier": "Aitor24\\Notifier\\Facades\\Notifier"
+            }
+        }
+    },
+    "minimum-stability": "dev"
 }
