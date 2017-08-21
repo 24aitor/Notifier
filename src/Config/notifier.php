@@ -4,7 +4,7 @@ return [
     'defaults' => [
         'type'     => 'info',
         'library'  => 'sweetalert',
-        'okText' => 'Ok',
+        'okText'   => 'Ok',
     ],
 
     'assets' => [

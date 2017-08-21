@@ -66,9 +66,9 @@ class Builder
 
         foreach ($types as $type) {
             if (session()->has($type)) {
-                $response = $response . ' ' . self::notify(session()->get($type), $type)->library($library);
+                $response = $response.' '.self::notify(session()->get($type), $type)->library($library);
             }
-        };
+        }
 
         return $response;
     }
