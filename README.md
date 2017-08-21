@@ -14,13 +14,17 @@ Laravel package to generate easily js notifications from php code
 
 ## Getting started
 
-### Register service provider
+### Register Service Provider & Alias
+
+If you're using laravel 5.5, you don't need to register Service Provider nor Alias. Else, you should do it!
+
+#### Register Service Provider
 
 ```
 Aitor24\Notifier\NotifierServiceProvider::class,
 ```
 
-## Register alias
+#### Register Alias
 
 ```
 'Notifier' => Aitor24\Notifier\Facades\Notifier::class,
