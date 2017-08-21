@@ -60,6 +60,15 @@ class Builder
             $library = config('notifier.defaults.library');
         }
 
-        return view('notifier::master', ['library' => $library]);
+        $types = collect(['error', 'success', 'warning', 'info']);
+
+        $response = '';
+
+        $types->each(function ($type) use ($response, $library) {
+            if (session()->has($type)) {
+                echo(self::notify(session()->get($type), $type)->library($library));
+            }
+        });
+        return;
     }
 }

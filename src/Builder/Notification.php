@@ -56,6 +56,10 @@ class Notification
      */
     public function __toString()
     {
-        return View::make('notifier::'.$this->library, ['string' => $this->string, 'subtitle' => $this->subtitle, 'type' => $this->type])->render();
+        return View::make('notifier::'.$this->library, [
+            'string'   => $this->string,
+            'subtitle' => $this->subtitle,
+            'type'     => $this->type
+        ])->render();
     }
 }
