@@ -13,6 +13,7 @@ class Notification
     public $subtitle;
     public $type;
     public $library;
+    public $okText;
 
     /**
      * Setup default values.
@@ -25,6 +26,7 @@ class Notification
         $this->subtitle = '';
         $this->type = $type ? $type : config('notifier.defaults.type');
         $this->library = config('notifier.defaults.library');
+        $this->okText = config('notifier.defaults.okText');
     }
 
     /**
@@ -52,6 +54,18 @@ class Notification
     }
 
     /**
+     * Setup library value.
+     *
+     * @param bool $library
+     */
+    public function okText($string)
+    {
+        $this->okText = $string;
+
+        return $this;
+    }
+
+    /**
      * It would render the notification.
      */
     public function __toString()
@@ -60,6 +74,7 @@ class Notification
             'string'   => $this->string,
             'subtitle' => $this->subtitle,
             'type'     => $this->type,
+            'okText' => $this->okText,
         ])->render();
     }
 }

@@ -2,8 +2,9 @@
 
 return [
     'defaults' => [
-        'type'    => 'info',
-        'library' => 'sweetalert',
+        'type'     => 'info',
+        'library'  => 'sweetalert',
+        'okText' => 'Ok',
     ],
 
     'assets' => [

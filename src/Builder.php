@@ -56,16 +56,20 @@ class Builder
      */
     public static function all($library = null)
     {
-        if (is_null($library)) {
+        if (!$library) {
             $library = config('notifier.defaults.library');
         }
 
-        $types = collect(['error', 'success', 'warning', 'info']);
+        $types = ['error', 'success', 'warning', 'info'];
 
-        $types->each(function ($type) use ($library) {
+        $response = '';
+
+        foreach ($types as $type) {
             if (session()->has($type)) {
-                echo self::notify(session()->get($type), $type)->library($library);
+                $response = $response . ' ' . self::notify(session()->get($type), $type)->library($library);
             }
-        });
+        };
+
+        return $response;
     }
 }
