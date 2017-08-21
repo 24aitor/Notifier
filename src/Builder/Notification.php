@@ -74,7 +74,7 @@ class Notification
             'string'   => $this->string,
             'subtitle' => $this->subtitle,
             'type'     => $this->type,
-            'okText' => $this->okText,
+            'okText'   => $this->okText,
         ])->render();
     }
 }
