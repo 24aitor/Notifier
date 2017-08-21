@@ -62,7 +62,7 @@ class Builder
 
         $types = collect(['error', 'success', 'warning', 'info']);
 
-        $types->each(function ($type) use ($response, $library) {
+        $types->each(function ($type) use ($library) {
             if (session()->has($type)) {
                 echo self::notify(session()->get($type), $type)->library($library);
             }
