@@ -2,8 +2,8 @@
 
 namespace Aitor24\Notifier;
 
-use Illuminate\Support\Facades\Session;
 use Aitor24\Notifier\Builder\Notification;
+use Illuminate\Support\Facades\Session;
 
 class Builder
 {
@@ -64,7 +64,7 @@ class Builder
 
         foreach ($types as $type) {
             if (Session::has($type)) {
-                $response .= ' ' . self::notify(Session::get($type), $type)->library($library);
+                $response .= ' '.self::notify(Session::get($type), $type)->library($library);
             }
         }
 
