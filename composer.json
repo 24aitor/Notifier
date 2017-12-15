@@ -13,7 +13,7 @@
             "email": "contact@aitorriba.com",
 			"homepage": "https://aitorriba.com/",
 			"role": "author"
-        },
+        }
     ],
 	"autoload": {
 		"psr-4": {
