@@ -36,7 +36,11 @@ class Notification
      */
     public function subtitle($subtitle)
     {
-        $this->subtitle = $subtitle;
+        if (is_array($subtitle)) {
+            $this->subtitle = $subtitle;
+        } else {
+            $this->subtitle = [$subtitle];
+        }
 
         return $this;
     }

@@ -2,9 +2,11 @@
 <script>
     swal({
         title: '{{ $string }}',
-        text: '{{ $subtitle }}',
+    	html: {!! json_encode($subtitle) !!}.join('<br>'),
         type: '{{ $type }}',
         // confirmButtonColor: "#DD6B55",
         confirmButtonText: '{{ $okText }}',
+        
+
     })
 </script>
