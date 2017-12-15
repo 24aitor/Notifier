@@ -3,7 +3,7 @@
 <script>
     $.notify({
         title: '{{ $string }}',
-        message: '{{ $subtitle }}'
+    	message: {!! json_encode($subtitle) !!}.join('<br>'),
     },{
         type: '{{ $type == 'error' ? 'danger' : $type }}'
     });
